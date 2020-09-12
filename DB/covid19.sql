@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 12, 2020 at 07:13 AM
+-- Generation Time: Sep 12, 2020 at 11:36 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.9
 
@@ -31,16 +31,19 @@ CREATE TABLE `berita` (
   `id_berita` int(11) NOT NULL,
   `judul` varchar(100) DEFAULT NULL,
   `isi` varchar(300) DEFAULT NULL,
-  `user` varchar(20) DEFAULT NULL
+  `user` varchar(20) DEFAULT NULL,
+  `tgl` varchar(50) DEFAULT NULL,
+  `foto` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `berita`
 --
 
-INSERT INTO `berita` (`id_berita`, `judul`, `isi`, `user`) VALUES
-(1, 'Pasien terdampak covid terbanyak di asd', 'Berdasarkan data kemendikbud.co.id, ternyata data pasien terdampak covid 19 terbanyak terdapat di Pulau Jawa ', 'user '),
-(3, 'Warga mulai remeh terhadap aturan new normal', 'Sering ditemukan bahwasannya sejak berlakunya sistem new normal, warga mulai berdatangan ke tempat umum dan mengabaikan protokol keseharan', 'Susan');
+INSERT INTO `berita` (`id_berita`, `judul`, `isi`, `user`, `tgl`, `foto`) VALUES
+(1, 'Pasien terdampak covid terbanyak di pulau Jawa', 'Berdasarkan data kemendikbud.co.id, ternyata data pasien terdampak covid 19 terbanyak terdapat di Pulau Jawa ....', 'Indah', '2020-09-12', 'sby.jpg'),
+(3, 'Warga nilai remeh aturan new normal', 'Sering ditemukan bahwasannya sejak berlakunya sistem new normal, warga mulai berdatangan ke tempat umum ...', 'Susan', '2020-09-12', 'mask.jpg'),
+(4, 'Pertumbuhan pasien semakin meningkat', 'Sering ditemukan bahwasannya sejak berlakunya sistem new normal, warga mulai berdatangan ke tempat umum ...', 'Ridho', '2020-09-12', '1.jpg');
 
 -- --------------------------------------------------------
 
@@ -118,7 +121,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `berita`
 --
 ALTER TABLE `berita`
-  MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `laporan`

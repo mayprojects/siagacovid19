@@ -9,14 +9,24 @@ class M_berita extends CI_Model {
 			
 	}
 
+	function getDash(){
+
+		$query = $this->db->query("SELECT * FROM berita limit 2")->result(); 
+		return $query;
+			
+	}
+
 	//CRUD MASTER USER
 
 	function save_data(){
-		
+		$img = '1.jpg';
 		$data = [
+
 				'judul' => $this->input->post('judul'),
 				'isi' => $this->input->post('isi'),
-				'user' => $this->input->post('user')
+				'user' => $this->input->post('user'),
+				'tgl' => $this->input->post('tgl'),
+				'foto' => $img
 			];
 
 	        $this->db->insert('berita', $data);
@@ -26,11 +36,13 @@ class M_berita extends CI_Model {
 
 	function update_data($id){
 
-		
+		$img = '1.jpg';
 		$data = [
 				'judul' => $this->input->post('judul'),
 				'isi' => $this->input->post('isi'),
-				'user' => $this->input->post('user')
+				'user' => $this->input->post('user'),
+				'tgl' => $this->input->post('tgl'),
+				'foto' => $img
 			];
 
 

@@ -34,6 +34,11 @@
 
                 <div class="col">
 
+                 <div class="form-group">
+                    <label for="tgl">Tgl Upload</label>
+                    <input type="text" class="form-control" id="tgl" value="<?= $data_berita['tgl']; ?>" name="judul" readonly>
+                  </div>
+
                 <div class="form-group">
                   <label for="nama">Topik Berita</label>
                   <input type="text" class="form-control" id="nama" name="judul" value="<?=$data_berita['judul']?>" readonly>

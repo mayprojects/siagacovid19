@@ -7,19 +7,20 @@
   
 <body>
 
-  <!-- navbar -->
-    <?php $this->load->view("layouts/navbar.php") ?>
-  <!-- /.navbar -->
+  
 
 <main role="main">
 
+  <div class="container">
+    <!-- navbar -->
+    <?php $this->load->view("layouts/navbar.php") ?>
+  <!-- /.navbar -->
+  </div>
+
   <section class="jumbotron text-center">
-    <div class="container">
+    <div class="container" id="awal">
       <h1>Bersatu kita lawan COVID 19!</h1>
       <p class="lead text-muted">Situs ini merupakan sumber informasi inisiatif sukarela warganet Indonesia pro-data, terdiri dari praktisi kesehatan, akademisi & profesional.</p>
-      <p>
-        <a href="#" class="btn btn-primary">View All</a>
-      </p>
     </div>
   </section>
 
@@ -29,50 +30,42 @@
       <div class="row" id="atas">
       	<div class="col">
           <div class="card mb-4 shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <p style="font-size: 50pt;text-align: center;padding: 5px;">222.390</p>
             <div class="card-body">
               <p class="card-text" align="center">Terkonfirmasi.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <button type="button" class="btn btn-sm btn-outline-success">View</button>
-              </div>
             </div>
           </div>
         </div>
         <div class="col">
           <div class="card mb-4 shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <p style="font-size: 50pt;text-align: center;padding: 5px;">121.300</p>
             <div class="card-body">
               <p class="card-text" align="center">Dalam Perawatan.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <button type="button" class="btn btn-sm btn-outline-success">View</button>
-              </div>
             </div>
           </div>
         </div>
         <div class="col">
           <div class="card mb-4 shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <p style="font-size: 50pt;text-align: center;padding: 5px;">80.000</p>
             <div class="card-body">
               <p class="card-text" align="center">Sembuh.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <button type="button" class="btn btn-sm btn-outline-success">View</button>
-              </div>
             </div>
           </div>
         </div>
         <div class="col">
           <div class="card mb-4 shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <p style="font-size: 50pt;text-align: center;padding: 5px;">8000</p>
             <div class="card-body">
               <p class="card-text" align="center">Meninggal.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <button type="button" class="btn btn-sm btn-outline-success">View</button>
-              </div>
             </div>
           </div>
         </div>
        	</div>
-      	<div class="row">
+       </div>
+      <div class="container">
+
+        <h3>Berita terkini</h3>
+      <div class="row">
 		  <?php foreach($berita as $data){ ?>
 		   <div class="col-sm-6">
 		    <div class="card">
@@ -86,6 +79,20 @@
 		  </div>
 		  <?php } ?>
 		</div>
+  </div>
+    <div class="container">
+      <h3>Reminder for you guys !</h3>
+      <div class="row">
+        <div class="col">
+          <img src="<?php echo base_url('assets/images/img-dir/r-1.png'); ?>" alt="..." class="img-thumbnail">
+        </div>
+        <div class="col">
+          <img src="<?php echo base_url('assets/images/img-dir/r-2.png'); ?>" alt="..." class="img-thumbnail">
+        </div>
+        <div class="col">
+          <img src="<?php echo base_url('assets/images/img-dir/r-3.png'); ?>" alt="..." class="img-thumbnail">
+        </div>
+      </div>
     </div>
   </div>
 </main>
@@ -93,12 +100,16 @@
 <footer class="text-muted"  style="background-color: #000;padding:10px; ">
   <div class="container">
     <p class="float-right">
-      <a href="#atas">Back to top</a>
+      <a href="#awal" >Back to top</a>
     </p>
-    <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+    <p><p>Siaga lawan COVID-19 &copy2020</p></p>
   </div>
 </footer>
 
   </body>
+
+   <!-- JS -->
+    <?php $this->load->view("layouts_user/js.php") ?>
+  <!-- /JS -->
 
 </html>

@@ -26,8 +26,28 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-		$data["berita"] = $this->m_berita->getData();
+		$data["berita"] = $this->m_berita->getDash();
 		$this->load->view('dashboard',$data);
+	}
+
+	public function berita()
+	{
+		$data["berita"] = $this->m_berita->getData();
+		$data["lim"] = $this->m_berita->getDash();
+		$this->load->view('depan/tampil_berita',$data);
+	}
+
+	public function data()
+	{
+		$this->load->view('depan/data_sebar');
+	}
+	public function deteksi()
+	{
+		$this->load->view('depan/deteksi');
+	}
+	public function histori()
+	{
+		$this->load->view('depan/histori');
 	}
 
 	public function login()

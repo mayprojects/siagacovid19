@@ -47,8 +47,8 @@
                 <thead >
                 <tr align="center">
                   <th>No.</th>
+                  <th>Tgl Upload</th>
                   <th>Judul Berita</th>
-                  <th>Konten</th>
                   <th>Upload by</th>
                   <th>Opsi</th>
                 </tr>
@@ -57,8 +57,8 @@
                    <?php $no = 1; foreach ($berita as $data): ?>
                    <tr>
                         <td><?php echo $no++; ?></td>
+                        <td><?php echo $data->tgl; ?></td>
                         <td><?php echo $data->judul ?></td>
-                        <td><?php echo $data->isi ?></td>
                         <td><?php echo $data->user ?></td>
                         <td align="center">
                           <a href="<?=base_url('berita/detail/').$data->id_berita;?>" class="btn btn-sm btn-outline-secondary"><i class="fa fa-eye"></i>View</a>

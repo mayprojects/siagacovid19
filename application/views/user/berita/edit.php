@@ -34,6 +34,11 @@
 
                 <div class="col">
 
+                   <div class="form-group">
+                    <label for="tgl">Tgl Upload</label>
+                    <input type="date" class="form-control" id="tgl" value="<?= $data_berita['tgl']; ?>" name="judul" >
+                  </div>
+
                <div class="form-group">
                     <label for="nama">Topik Berita</label>
                     <input type="text" class="form-control" id="nama" value="<?= $data_berita['judul']; ?>" name="judul" >
@@ -54,7 +59,7 @@
 
         <div class="card-footer">
           <button type="submit" class="btn btn-primary">Submit</button>
-          <a href="<?=base_url('berita/tampil')?>" class="btn btn-secondary" role="button">Kembali</a>
+          <a href="<?=base_url('berita')?>" class="btn btn-secondary" role="button">Kembali</a>
         </div>
       </form>
     

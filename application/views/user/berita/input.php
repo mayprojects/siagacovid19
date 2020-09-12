@@ -35,6 +35,10 @@
                 <div class="col">
 
                   <div class="form-group">
+                    <label for="tgl">Tgl. Upload</label>
+                   <input type="text" class="form-control" name="tgl" id="tgl" value="<?= $tgl ?>" readonly>
+                  </div>
+                  <div class="form-group">
                     <label for="nama">Topik Berita</label>
                     <input type="text" class="form-control" id="nama" name="judul" >
                   </div>

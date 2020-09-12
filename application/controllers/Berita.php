@@ -11,12 +11,14 @@ class Berita extends CI_Controller
 	//function halaman menu
 	public function index()
 	{
+		
 		$data["berita"] = $this->m_berita->getData();
 		$this->load->view("user/berita/data",$data);
 	}
 
 	public function input(){
-		$this->load->view("user/berita/input");
+		$data["tgl"] = date("d-m-Y");
+		$this->load->view("user/berita/input",$data);
 	}
 
 	public function edit($id){
@@ -31,6 +33,7 @@ class Berita extends CI_Controller
 
 	//function insert
 	function tambah_data(){
+		$this->form_validation->set_rules('tgl', 'Tgl Upload', 'required');
 		$this->form_validation->set_rules('judul', 'Topik Berita', 'required');
 		$this->form_validation->set_rules('isi', 'Konten Berita', 'required');
 		$this->form_validation->set_rules('user', 'Author', 'required');
@@ -47,6 +50,7 @@ class Berita extends CI_Controller
 	}
 
 	function edit_data($id){
+		$this->form_validation->set_rules('tgl', 'Tgl Upload', 'required');
 		$this->form_validation->set_rules('judul', 'Topik Berita', 'required');
 		$this->form_validation->set_rules('isi', 'Konten Berita', 'required');
 		$this->form_validation->set_rules('user', 'Author', 'required');

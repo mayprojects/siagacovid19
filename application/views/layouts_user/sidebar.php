@@ -11,13 +11,13 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('user/berita'); ?>">
+            <a class="nav-link" href="<?= base_url('berita'); ?>">
               <span data-feather="plus-circle"></span>
               Berita Terbaru
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('user/laporan'); ?>">
+            <a class="nav-link" href="<?= base_url('laporan'); ?>">
               <span data-feather="file-text"></span>
               Sigap Covid 19
             </a>

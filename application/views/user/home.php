@@ -71,4 +71,8 @@
   </div>
   </body>
 
+  <!-- JS -->
+    <?php $this->load->view("layouts_user/js.php") ?>
+  <!-- /JS -->
+
 </html>

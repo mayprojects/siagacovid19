@@ -73,42 +73,18 @@
         </div>
        	</div>
       	<div class="row">
-		  <div class="col-sm-6">
-		    <div class="card">
-		      <div class="card-body">
-		        <h5 class="card-title">Special title treatment</h5>
-		        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-		        <a href="#" class="btn btn-primary">Go somewhere</a>
-		      </div>
-		    </div>
-		  </div>
-		  <div class="col-sm-6">
-		    <div class="card">
-		      <div class="card-body">
-		        <h5 class="card-title">Special title treatment</h5>
-		        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-		        <a href="#" class="btn btn-primary">Go somewhere</a>
-		      </div>
-		    </div>
-		  </div>
+		  <?php foreach($berita as $data){ ?>
 		   <div class="col-sm-6">
 		    <div class="card">
 		      <div class="card-body">
-		        <h5 class="card-title">Special title treatment</h5>
-		        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-		        <a href="#" class="btn btn-primary">Go somewhere</a>
+		        <h5 class="card-title"><?= $data->judul; ?></h5>
+		        <p class="card-text"><?= $data->isi; ?></p>
+		        <a href="#" class="btn btn-primary">Detail</a>
 		      </div>
+		      <small style="padding:5px;" align="right" class="text-muted">-Upload by <b><?= $data->user; ?></b></small>
 		    </div>
 		  </div>
-		   <div class="col-sm-6">
-		    <div class="card">
-		      <div class="card-body">
-		        <h5 class="card-title">Special title treatment</h5>
-		        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-		        <a href="#" class="btn btn-primary">Go somewhere</a>
-		      </div>
-		    </div>
-		  </div>
+		  <?php } ?>
 		</div>
     </div>
   </div>

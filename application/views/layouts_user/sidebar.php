@@ -24,7 +24,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?= base_url('user/logout'); ?>">
-              <span data-feather="file-text"></span>
+              <span data-feather="log-out"></span>
               Logout
             </a>
           </li>

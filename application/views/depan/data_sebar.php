@@ -53,6 +53,7 @@
       <li>Maluku Utara: http://corona.malutprov.go.id/ </li>
       <li>Papua Papua: https://www.papua.go.id/, https://dinkes.papua.go.id/ </li>
       <li>Papua Barat: https://dinkes.papuabaratprov.go.id/</li>
+    </ol>
     </div>
 
 </main><!-- /.container -->

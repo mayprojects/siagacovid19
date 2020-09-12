@@ -17,7 +17,7 @@
         <?php endif; ?> 
 
       <div class="text-center mb-4">
-        <img class="mb-4" src="../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+        <img class="mb-4" src="<?php echo base_url('assets/images/img-dir/bootstrap-solid.svg'); ?>"width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">Masuk sebagai user</h1>
         <p>Untuk menambahkan data terbaru seputar covid 19. Sedikit info pasti akan bermanfaat :)</p>
       </div>

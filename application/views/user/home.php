@@ -29,10 +29,10 @@
         
         <div class="col">
           <div class="card">
-            <img src="<?php echo base_url('assets/images/img-dir/add2.png'); ?>" class="card-img-top" alt="...">
+            <img src="<?php echo base_url('assets/images/img-dir/read2.jpg'); ?>" class="card-img-top" alt="...">
             <div class="card-body">
-              <p class="card-text">Add new data.</p>
-                <a href="<?= base_url('dashboard'); ?>" class="btn btn-sm btn-outline-secondary">Continue</a>
+              <p class="card-text">Lihat data laporan sigap.</p>
+                <a href="<?= base_url('berita'); ?>" class="btn btn-sm btn-outline-secondary">Continue</a>
           </div>          
           </div>
         </div><br/>
@@ -40,29 +40,30 @@
           <div class="card">
             <img src="<?php echo base_url('assets/images/img-dir/update2.png'); ?>" class="card-img-top" alt="knawhy">
             <div class="card-body">
-              <p class="card-text">Update data you need.</p>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Continue</button>
+              <p class="card-text">Lihat data berita terbaru.</p>
+              <a href="<?= base_url('laporan'); ?>" class="btn btn-sm btn-outline-secondary">Continue</a>
           </div>          
           </div>
         </div>
         <div class="col">
           <div class="card">
-            <img src="<?php echo base_url('assets/images/img-dir/read2.jpg'); ?>" class="card-img-top" alt="...">
+            <img src="<?php echo base_url('assets/images/img-dir/add2.png'); ?>" class="card-img-top" alt="knawhy">
             <div class="card-body">
-              <p class="card-text">Check data here.</p>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Continue</button>
-          </div>          
-          </div>
-        </div><br/>
-        <div class="col">
-          <div class="card">
-            <img src="<?php echo base_url('assets/images/img-dir/delete.jpg'); ?>" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text">Choose to delete data.</p>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Continue</button>
+              <p class="card-text">Lihat data berita terbaru.</p>
+              <a href="<?= base_url('user/berita'); ?>" class="btn btn-sm btn-outline-secondary">Continue</a>
           </div>          
           </div>
         </div>
+        <div class="col">
+          <div class="card">
+            <img src="<?php echo base_url('assets/images/img-dir/delete.jpg'); ?>" class="card-img-top" alt="knawhy">
+            <div class="card-body">
+              <p class="card-text">Lihat data berita terbaru.</p>
+              <a href="<?= base_url('user/berita'); ?>" class="btn btn-sm btn-outline-secondary">Continue</a>
+          </div>          
+          </div>
+        </div>
+        
       </div>
 
    

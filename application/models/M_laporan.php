@@ -13,84 +13,46 @@ class M_laporan extends CI_Model {
 
 	function save_data(){
 
-		$config['allowed_types'] = 'jpeg|jpg|png';
-		$config['max_size'] 	 = '2048';
-		$config['upload_path']	 = './assets/foto-upload/';
 
-		$this->load->library('upload', $config);
+		$data = [
+				'user' => $this->input->post('user'),
+				'nama_pasien' => $this->input->post('nama_pasien'),
+				'alamat' => $this->input->post('alamat'),
+				'gejala' => $this->input->post('gejala'),
+				'rujukan' => $this->input->post('rujukan'),
+				'status' => $this->input->post('status')
+				
 
-		if (!$this->upload->do_upload('foto')) {
-			echo 'gagal';
-		}else {
+			];
 
-			$upload = $this->upload->data();
-			$image_name = $upload['file_name'];
-			$user = $this->input->post('username');
-			$pass = $this->input->post('password');
-			$encpass = sha1(md5($user).md5($pass));
-
-			$data = [
-					'nama_petugas' => $this->input->post('nama_petugas'),
-					'tgl_lahir' => $this->input->post('tgl_lahir'),
-					'jk' => $this->input->post('jk'),
-					'agama' => $this->input->post('agama'),
-					'alamat' => $this->input->post('alamat'),
-					'no_tlp' => $this->input->post('no_tlp'),
-					'username' => $user,
-					'password' => $encpass,
-					'level' => $this->input->post('level'),
-					'foto' => $image_name,
-					
-
-				];
-
-	        $this->db->insert('petugas', $data);
-    	}
+        $this->db->insert('laporan', $data);
+    	
 
 	}
 
 	function update_data($id){
 
-		$config['allowed_types'] = 'jpeg|jpg|png';
-		$config['max_size'] 	 = '2048';
-		$config['upload_path']	 = './assets/foto-upload/';
-
-		$this->load->library('upload', $config);
-
-		if (!$this->upload->do_upload('foto')) {
-			echo 'gagal';
-		}else {
-
-			$upload = $this->upload->data();
-			$image_name = $upload['file_name'];
-			$user = $this->input->post('username');
-			$pass = $this->input->post('password');
-			$encpass = sha1(md5($user).md5($pass));
-
+		
 			$data = [
-					'nama_petugas' => $this->input->post('nama_petugas'),
-					'tgl_lahir' => $this->input->post('tgl_lahir'),
-					'jk' => $this->input->post('jk'),
-					'agama' => $this->input->post('agama'),
-					'alamat' => $this->input->post('alamat'),
-					'no_tlp' => $this->input->post('no_tlp'),
-					'username' => $user,
-					'password' => $encpass,
-					'level' => $this->input->post('level'),
-					'foto' => $image_name,
+				'user' => $this->input->post('user'),
+				'nama_pasien' => $this->input->post('nama_pasien'),
+				'alamat' => $this->input->post('alamat'),
+				'gejala' => $this->input->post('gejala'),
+				'rujukan' => $this->input->post('rujukan'),
+				'status' => $this->input->post('status')
 					
 
 				];
-		}
+		
 
 
-		$this->db->where('id_petugas', $id);
-		$this->db->update('petugas', $data);
+		$this->db->where('id_laporan', $id);
+		$this->db->update('laporan', $data);
 			
 	}
 
 	function delete_data($id){
-		$this->db->where('id_petugas', $id);
-		$this->db->delete('petugas');
+		$this->db->where('id_laporan', $id);
+		$this->db->delete('laporan');
 	}
 }
